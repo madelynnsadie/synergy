@@ -19,4 +19,4 @@ COPY --from=builder /app/ ./
 
 EXPOSE 3023
 
-CMD ["pnpm", "start", "-p", "3023"]
+CMD ["npm", "start", "--", "-p", "3023"]

@@ -1,7 +1,8 @@
 FROM node:20-alpine AS deps
+RUN npm install -g pnpm
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --production
+RUN pnpm i
 
 FROM node:20-alpine AS builder
 WORKDIR /app
